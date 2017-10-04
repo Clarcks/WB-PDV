@@ -1,0 +1,117 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="NFe.AppTeste.MainPage"
+          Title="MainWindow" Height="693.816" Width="1021.837" WindowStyle="None" WindowStartupLocation="CenterScreen" WindowState="Maximized" KeyDown="Window_KeyDown_1">
+    <Window.Resources>
+
+        <!-- grid root styles -->
+        <Style x:Key="_gridRootStyles" TargetType="{x:Type Grid}"/>
+
+        <!-- panel sidebar styles -->
+        <Style x:Key="_gridSidebarStyles" TargetType="{x:Type Grid}">
+            <Setter Property="Background" Value="White" />
+            <Setter Property="Panel.ZIndex" Value="3" />
+            <Setter Property="Width" Value="0" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Style.Triggers>
+               
+               
+                <DataTrigger Binding="{Binding IsChecked, ElementName=_buttonOpenSidebar}" Value="True">
+                    <DataTrigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="850" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.EnterActions>
+                    <DataTrigger.ExitActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width" To="0" Duration="0:0:0.2" />
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </DataTrigger.ExitActions>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <!-- grid content styles -->
+        <Style x:Key="_gridContentStyles" TargetType="{x:Type Grid}">
+            <Setter Property="Background" Value="#eee" />
+        </Style>
+
+        <!-- button open sidebar styles -->
+        <Style x:Key="_buttonOpenSidebarStyles" TargetType="{x:Type ToggleButton}">
+            <Setter Property="HorizontalAlignment" Value="Right" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Padding" Value="16 8" />
+            <Setter Property="Margin" Value="8" />
+        </Style>
+
+        <!-- border overlay styles -->
+        <Style x:Key="_borderOverlayStyles" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="#111" />
+            <Setter Property="Opacity" Value="0.5" />
+            <Setter Property="Panel.ZIndex" Value="-1" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=_buttonOpenSidebar}" Value="True">
+                    <Setter Property="Panel.ZIndex" Value="2" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsChecked, ElementName=_buttonOpenSidebar}" Value="False">
+                    <Setter Property="Panel.ZIndex" Value="-1" />
+                </DataTrigger>
+            </Style.Triggers>
+
+        </Style>
+
+        <!-- panel menu styles -->
+        <Style x:Key="_panelMenuStyles" TargetType="{x:Type StackPanel}">
+            <Setter Property="Margin" Value="32" />
+        </Style>
+
+        <!-- button menu item styles -->
+        <Style x:Key="_buttonMenuItemStyles" TargetType="{x:Type Button}">
+            <Setter Property="Padding" Value="16 8" />
+            <Setter Property="Margin" Value="0 4" />
+        </Style>
+    </Window.Resources>
+
+    <Grid x:Name="_gridRoot" Style="{StaticResource _gridRootStyles}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="93*"/>
+            <RowDefinition Height="5*"/>
+        </Grid.RowDefinitions>
+
+        <!-- grid sidebar -->
+
+
+        <!-- grid sidebar -->
+        <Grid x:Name="_gridSidebar" Style="{StaticResource _gridSidebarStyles}" Grid.RowSpan="2">
+            <StackPanel Style="{StaticResource _panelMenuStyles}" Margin="12,12,12,12" RenderTransformOrigin="0.5,0.5" >
+
+                <Frame Content="Frame" x:Name="Nav" Navigating="Nav_Navigating" ScrollViewer.VerticalScrollBarVisibility="Disabled" NavigationUIVisibility="Hidden"/>
+
+
+            </StackPanel>
+        </Grid>
+
+        <!-- grid content -->
+        <Grid x:Name="_gridContent" Style="{StaticResource _gridContentStyles}" Grid.RowSpan="2"/>
+
+        <!-- helper -->
+        <ToggleButton x:Name="_buttonOpenSidebar" Style="{StaticResource _buttonOpenSidebarStyles}" Content="Open" Checked="_buttonOpenSidebar_Checked" Margin="0,219,23,0" Height="34" Width="63" />
+        <Border x:Name="_borderOverlay" Style="{StaticResource _borderOverlayStyles}" MouseDown="_borderOverlay_MouseDown" Grid.RowSpan="2" />
+        <ToggleButton x:Name="_buttonOpenSidebar_Copy" Style="{StaticResource _buttonOpenSidebarStyles}" Content="Open" Checked="_buttonOpenSidebar_Checked" Margin="0,280,23,0" Height="34" Width="63" RenderTransformOrigin="0.095,0.676" />
+
+
+        <x:Code>
+            <![CDATA[
+            private void _borderOverlay_MouseDown(object sender, MouseButtonEventArgs e)
+            {
+                _buttonOpenSidebar.IsChecked = false;
+            }
+            ]]>
+        </x:Code>
+    </Grid>
+</Window>

@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4B4EC6E9-A5D7-46E4-82F4-F419510F132F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClassGlobals</RootNamespace>
+    <AssemblyName>ClassGlobals</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ArquiteturaASABusiness">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\ArquiteturaASABusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="ArquiteturaTesteASA">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\ArquiteturaTesteASA.dll</HintPath>
+    </Reference>
+    <Reference Include="ASArquiteruraData">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\ASArquiteruraData.dll</HintPath>
+    </Reference>
+    <Reference Include="ASAsysFwSiTef">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\ASAsysFwSiTef.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\ASAsys\ASAsysNFCE\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rest">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlBulkMerge">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\SqlBulkMerge.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlBulkMerge.Test">
+      <HintPath>..\..\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\SqlBulkMerge.Test.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAL.cs" />
+    <Compile Include="CarregaGlobal.cs" />
+    <Compile Include="Global.cs" />
+    <Compile Include="Impressora.cs" />
+    <Compile Include="objNota.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\CancelaNfce.cs">
+      <DependentUpon>CancelaNfce.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\CFeSatSp.cs">
+      <DependentUpon>CFeSatSp.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\DanfeCfce.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DanfeCfce.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\DanfeCom.cs">
+      <DependentUpon>DanfeCom.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport8.cs">
+      <DependentUpon>CrystalReport8.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\Fechamento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fechamento.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report\GerencialGrande.cs">
+      <DependentUpon>GerencialGrande.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\RelatorioGenrencial.cs">
+      <DependentUpon>RelatorioGenrencial.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\ResumidaDanfe.cs">
+      <DependentUpon>ResumidaDanfe.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\Suprimento.cs">
+      <DependentUpon>Suprimento.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Report\Tpag.cs">
+      <DependentUpon>Tpag.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Venda.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Report\CancelaNfce.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CancelaNfce.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CFeSatSp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CFeSatSp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DanfeCfce.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DanfeCfce.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\DanfeCom.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DanfeCom.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport8.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport8.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Fechamento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Fechamento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\GerencialGrande.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>GerencialGrande.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\RelatorioGenrencial.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RelatorioGenrencial.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\ResumidaDanfe.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ResumidaDanfe.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Suprimento.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Suprimento.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\Tpag.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Tpag.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NFCE\NFe.Classes\NFe.Classes.csproj">
+      <Project>{29ca1da2-440d-484b-951a-cf1b2eb27984}</Project>
+      <Name>NFe.Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\Nfe.Impressao\NFe.Impressao.csproj">
+      <Project>{b7f6a2ff-fd0e-4b44-82b3-371605cd0510}</Project>
+      <Name>NFe.Impressao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\NFe.Servicos\NFe.Servicos.csproj">
+      <Project>{ccfdb136-3ee3-4aed-aa69-26abbcb553c6}</Project>
+      <Name>NFe.Servicos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\NFe.Utils\NFe.Utils.csproj">
+      <Project>{e35e7c4a-5690-4979-8b43-002975b48eaa}</Project>
+      <Name>NFe.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\NFe.Wsdl\NFe.Wsdl.csproj">
+      <Project>{23ba5fa7-8bd6-4ae1-9895-54f119dd15fa}</Project>
+      <Name>NFe.Wsdl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,164 @@
+﻿<UserControl x:Class="NFe.AppTeste.testeNFCe"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="679" Width="555">
+    <Grid Margin="0,0,10,0">
+        <TabControl x:Name="TabSuperior" Height="331" Margin="10,10,10,0" VerticalAlignment="Top">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                    <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+
+            <TabItem Header="NF-e/NFC-e">
+                <Grid Background="White">
+                    <Button x:Name="BtnStatusServico" Content="Status do &#xD;&#xA;Serviço" HorizontalAlignment="Left"
+    					Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Click="BtnStatusServico_Click" Height="51" />
+                    <Button x:Name="BtnCriareEnviar2" Content="Criar e &#xD;&#xA;Enviar 2.0" HorizontalAlignment="Left"
+    					Margin="10,66,0,0" VerticalAlignment="Top" Width="100" Click="BtnCriareEnviar2_Click" Height="47" />
+                    <Button x:Name="BtnConsultaXml" Content="Consultar &#xD;&#xA;carregando XML" HorizontalAlignment="Left"
+    					Margin="10,173,0,0" VerticalAlignment="Top" Width="100" Click="BtnConsultaXml_Click" Height="53" />
+                    <Button x:Name="BtnConsultaChave" Content="Consultar &#xD;&#xA;pela Chave" HorizontalAlignment="Left"
+    					Margin="115,173,0,0" VerticalAlignment="Top" Width="95" Click="BtnConsultaChave_Click" Height="53" />
+                    <Button x:Name="BtnInutiliza" Content="Inutilizar &#xD;&#xA;Numeração" HorizontalAlignment="Left"
+    					Margin="115,10,0,0"
+    					VerticalAlignment="Top" Width="95" Click="BtnInutiliza_Click" Height="51" />
+                    <Button x:Name="BtnGerarNfe2" Content="Criar e &#xD;&#xA;Salvar XML 2.0" HorizontalAlignment="Left"
+    					Margin="215,66,0,0" VerticalAlignment="Top" Width="94" Click="BtnGerarNfe2_Click" Height="47" />
+                    <Button x:Name="BtnConsultarReciboLote2" Content="Consultar &#xD;&#xA;Recibo Lote 2.0"
+    					HorizontalAlignment="Left" Margin="115,66,0,0" VerticalAlignment="Top" Width="95"
+    					Click="BtnConsultarReciboLote2_Click" Height="47" />
+                    <Button x:Name="BtnCriareEnviar3" Content="Criar e &#xD;&#xA;Enviar 3.0" HorizontalAlignment="Left"
+    					Margin="10,118,0,0" VerticalAlignment="Top" Width="100" Click="BtnCriareEnviar3_Click" Height="50" />
+                    <Button x:Name="BtnConsultarReciboLote3" Content="Consultar &#xD;&#xA;Recibo Lote 3.0"
+    					HorizontalAlignment="Left" Margin="115,118,0,0" VerticalAlignment="Top" Width="95"
+    					Click="BtnConsultarReciboLote3_Click" Height="50" />
+                    <Button x:Name="BtnGerarNfe3" Content="Criar e &#xD;&#xA;Salvar XML 3.0" HorizontalAlignment="Left"
+    					Margin="215,118,0,0" VerticalAlignment="Top" Width="94" Click="BtnGerarNfe3_Click" Height="50" />
+                    <Button x:Name="BtnCartaCorrecao" Content="Carta de &#xD;&#xA;correção" HorizontalAlignment="Left"
+    					Margin="10,231,0,0" VerticalAlignment="Top" Width="100" Click="BtnCartaCorrecao_Click" Height="56" />
+                    <Button x:Name="BtnCancelarNFe" Content="Cancelar" HorizontalAlignment="Left"
+    					Margin="413,10,0,0" VerticalAlignment="Top" Width="95" Click="BtnCancelarNFe_Click" Height="51" />
+                    <Button x:Name="BtnEnviaEpec" Content="Enviar EPEC" HorizontalAlignment="Left"
+    					Margin="215,173,0,0" VerticalAlignment="Top" Width="94" Click="BtnEnviaEpec_Click" Height="53" />
+                    <Button x:Name="BtnConsultaEpec" Content="Consultar EPEC" HorizontalAlignment="Left"
+    					Margin="314,10,0,0" VerticalAlignment="Top" Width="94" Click="BtnConsultaEpec_Click" Height="51" />
+                    <Button x:Name="BtnImportarXml" Content="Importar XML" HorizontalAlignment="Left"
+    					Margin="215,10,0,0" VerticalAlignment="Top" Width="94" Click="BtnImportarXml_Click" Height="51" />
+                    <Button x:Name="BtnValida" Content="Validar" HorizontalAlignment="Left"
+    					Margin="413,66,0,0" VerticalAlignment="Top" Width="95" Click="BtnValida_Click" Height="47" />
+                    <Button x:Name="BtnAssina" Content="Assinar" HorizontalAlignment="Left"
+    					Margin="115,231,0,0" VerticalAlignment="Top" Width="95" Click="BtnAssina_Click" Height="56" />
+                    <Button x:Name="BtnAdicionaNfeproc" Content="Adicionar &#xD;&#xA;proc ao XML" HorizontalAlignment="Left"
+    					Margin="314,66,0,0" VerticalAlignment="Top" Width="94" Click="BtnAdicionaNfeproc_Click" Height="47" />
+                    <Button x:Name="BtnCarregaXmlEnvia" Content="Carregar &#xD;&#xA;XML e Enviar" HorizontalAlignment="Left"
+    					Margin="215,231,0,0" VerticalAlignment="Top" Width="94" Click="BtnCarregaXmlEnvia_Click" Height="56" />
+                    <Button x:Name="BtnConsultaCadastro" Content="Consultar &#xD;&#xA;Cadastro" HorizontalAlignment="Left"
+    					Margin="413,118,0,0" VerticalAlignment="Top" Width="95" Click="BtnConsultaCadastro_Click" Height="50" />
+                    <Button x:Name="BtnDownlodNfe" Content="Downlod NFe" HorizontalAlignment="Left"
+    					Margin="314,118,0,0" VerticalAlignment="Top" Width="94" Click="BtnDownlodNfe_Click" Height="50" />
+                    <Button x:Name="BtnNfceDanfe" Content="DANFE &#xD;&#xA;NFCe Normal" HorizontalAlignment="Left"
+    					Margin="314,231,0,0" VerticalAlignment="Top" Width="94" Click="BtnNfceDanfe_Click" Height="56" />
+                    <Button x:Name="BtnNfceDanfeOff" Content="DANFE NFCe &#xD;&#xA;Cont. Offline" HorizontalAlignment="Left"
+    					Margin="413,173,0,0" VerticalAlignment="Top" Width="95" Click="BtnNfceDanfeOff_Click" Height="53" />
+                    <Button x:Name="BtnAdminCsc" Content="Administrar CSC" HorizontalAlignment="Left"
+    					Margin="314,173,0,0" VerticalAlignment="Top" Width="94" Click="BtnAdminCsc_Click" Height="53"/>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+        <TabControl x:Name="TabInferior" Margin="11,346,0,10">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                    <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+
+            <TabItem Header="Envio">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox x:Name="RtbEnvioStr" Margin="0" VerticalScrollBarVisibility="Visible"
+        				IsReadOnly="True">
+                        <FlowDocument />
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Retorno">
+                <Grid Background="White">
+                    <RichTextBox x:Name="RtbRetornoStr" Margin="0" VerticalScrollBarVisibility="Visible"
+        				IsReadOnly="True">
+                        <FlowDocument />
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="XML Retorno">
+                <Grid Background="White">
+                    <WebBrowser x:Name="WebXmlRetorno" />
+                </Grid>
+            </TabItem>
+            <TabItem Header="Retorno Completo WS">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox x:Name="RtbRetornoCompletoStr" Margin="0" VerticalScrollBarVisibility="Visible"
+        				IsReadOnly="True">
+                        <FlowDocument />
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Dados Retorno">
+                <Grid Background="#FFE5E5E5">
+                    <RichTextBox x:Name="RtbDadosRetorno" Margin="0" VerticalScrollBarVisibility="Visible"
+        				IsReadOnly="True">
+                        <FlowDocument />
+                    </RichTextBox>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="TabItemNfe" Header="NFe">
+                <Grid Background="#FFE5E5E5">
+                    <WebBrowser x:Name="WebXmlNfe" />
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>

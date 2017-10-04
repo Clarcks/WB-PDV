@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C60C2B4A-A2AA-4A91-A0E3-6BBE14481AF9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SlidingPanel</RootNamespace>
+    <AssemblyName>SlidingPanel</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ACBrFramework.Net">
+      <HintPath>D:\dll\ACBrFramework.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="ArquiteturaASABusiness">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\ArquiteturaASABusiness.dll</HintPath>
+    </Reference>
+    <Reference Include="ArquiteturaTesteASA">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\ArquiteturaTesteASA.dll</HintPath>
+    </Reference>
+    <Reference Include="ASArquiteruraData">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\ASArquiteruraData.dll</HintPath>
+    </Reference>
+    <Reference Include="ASAsysFwSiTef, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\ArquiteruraASA\ASAsysFwSiTef\bin\Debug\ASAsysFwSiTef.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpf.Core.v14.1, Version=14.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MessagingToolkit.QRCode">
+      <HintPath>..\..\..\ASAsys\ASAsysNFCE\MessagingToolkit.QRCode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rest">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\Rest.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlBulkMerge">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\SqlBulkMerge.dll</HintPath>
+    </Reference>
+    <Reference Include="SqlBulkMerge.Test">
+      <HintPath>D:\VOLTA\ArquiteruraASA\ArquiteruraASA\ArquiteruraASA\Frameworks\ArquiteturaTesteASA\bin\Debug\SqlBulkMerge.Test.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WPFTextBoxAutoComplete, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WPFTextBoxAutoComplete.1.0.2\lib\net40\WPFTextBoxAutoComplete.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="frmDialog.xaml.cs">
+      <DependentUpon>frmDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="senha.xaml.cs">
+      <DependentUpon>senha.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Suprimento.xaml.cs">
+      <DependentUpon>Suprimento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UsrPag.xaml.cs">
+      <DependentUpon>UsrPag.xaml</DependentUpon>
+    </Compile>
+    <Page Include="frmDialog.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Classes\manipulacao.cs" />
+    <Compile Include="Classes\processaXml.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="senha.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Suprimento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UsrPag.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="yK3tnRZ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="GREY.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="yK3tnRZ1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="yK3tnRZ2.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassGlobals\ClassGlobals.csproj">
+      <Project>{4b4ec6e9-a5d7-46e4-82f4-f419510f132f}</Project>
+      <Name>ClassGlobals</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\NFe.AppTeste\NFe.AppTeste.csproj">
+      <Project>{bb030128-9609-46d5-941c-1f53d95157e2}</Project>
+      <Name>NFe.AppTeste</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\NFe.Classes\NFe.Classes.csproj">
+      <Project>{29ca1da2-440d-484b-951a-cf1b2eb27984}</Project>
+      <Name>NFe.Classes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\Nfe.Impressao\NFe.Impressao.csproj">
+      <Project>{b7f6a2ff-fd0e-4b44-82b3-371605cd0510}</Project>
+      <Name>NFe.Impressao</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\NFe.Servicos\NFe.Servicos.csproj">
+      <Project>{ccfdb136-3ee3-4aed-aa69-26abbcb553c6}</Project>
+      <Name>NFe.Servicos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NFCE\NFe.Utils\NFe.Utils.csproj">
+      <Project>{e35e7c4a-5690-4979-8b43-002975b48eaa}</Project>
+      <Name>NFe.Utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\src\CurrencyTextBoxControl\CurrencyTextBoxControl.csproj">
+      <Project>{144a2ee7-09ec-4618-ba94-6593205962c9}</Project>
+      <Name>CurrencyTextBoxControl</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="WBPDV.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="2.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
